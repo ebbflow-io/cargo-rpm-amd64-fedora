@@ -1,0 +1,16 @@
+# action.yml
+name: 'Rust Cargo Rpm Package Build (amd64, Fedora)'
+description: 'Builds a statically linked rpm package, amd64, musl, fedora 32'
+branding:
+  icon: 'package'
+  color: 'orange'
+inputs:
+  cmd:
+    description: 'build command'
+    required: true
+    default: 'cargo rpm build -v'
+runs:
+  using: 'docker'
+  image: 'docker://ebbflow/cargo-rpm-amd64-fedora'
+  args:
+    - ${{ inputs.cmd }}
