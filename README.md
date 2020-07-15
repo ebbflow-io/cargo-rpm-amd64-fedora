@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: RPM Build
-      uses: ebbflow-io/cargo-rpm-amd64-fedora@1.0
+      uses: ebbflow-io/cargo-rpm-amd64-fedora@1.1
 ```
 
 A working example can be found in use by Ebbflow to build its client package for various OS and CPU architectures [here](https://github.com/ebbflow-io/ebbflow/blob/master/.github/workflows/continuous-integration.yml).
