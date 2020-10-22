@@ -5,7 +5,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     PATH=/usr/local/cargo/bin:$PATH;
 
 RUN set -eux; \
-    dnf -y install musl-devel; \
+    dnf -y install musl-devel openssl-devel; \
     dnf -y groupinstall 'Development Tools'; \
 	curl -o /tmp/install_rust.sh https://sh.rustup.rs; \
 	sh /tmp/install_rust.sh -y --default-toolchain stable;
