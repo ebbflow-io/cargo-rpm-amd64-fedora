@@ -8,7 +8,7 @@ ln -s /root/.rustup $HOME/.rustup
 
 # go to the repo root
 cd $GITHUB_WORKSPACE
-mkdir target
+mkdir -p target
 chmod 0777 ./target
 export CARGO_TARGET_DIR=$GITHUB_WORKSPACE/target
 sh -c "$*"
